@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrinho de Compras</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="cart.html">Carrinho</a></li>
+                <li><a href="#">Contato</a></li>
+                <li><a href="#">Perfil</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Seu Carrinho</h1>
+        <ul id="cart-items"></ul>
+        <p>Total: R$ <span id="cart-total">0.00</span></p>
+        <button onclick="finalizePurchase()">Finalizar Compra</button>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 Minha Loja de Roupas</p>
+    </footer>
+
+    <script src="cart.js"></script>
+</body>
+</html>

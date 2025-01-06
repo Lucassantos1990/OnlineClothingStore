@@ -1,35 +1,84 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>G23 Malhas</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <title>G23 Malhas</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <script src="script.js"></script>
 </head>
 <body>
     <header>
-        <nav>
-            <img src="" alt="">
-            
+        <nav> 
             <p>G23 Malhas</p>
+            
             <ul>
-                <li><a href="#">Início</a></li>
+                <li><a href="#"><i class="fas fa-home"></i> Inicio</a></li>
                 <li><a href="#">Produtos</a></li>
                 <li><a href="#">Carrinho <span id="cart-count">0</span></a></li>
                 <li><a href="#">Contato</a></li>
                 <li><a href="#">Perfil</a></li>
+                <input type="text" placeholder="Buscar produtos..." id="search-bar">
             </ul>
         </nav>
-        
+       
     </header>
 
+    
     <main>
         <section id="products">
+            <div class="product">
+                <img src="C:\Users\lkweb\Desktop\Projeto-compartilhado\OnlineClothingStore-main\imagens\highMarrom.jpg" alt="Camiseta">
+                <h2>Camiseta Estilosa</h2>
+                <p>R$ 49,90</p>
+                <div class="options">
+                    <label for="size">Tamanho:</label>
+                    <select id="size">
+                        <option value="P">P</option>
+                        <option value="M">M</option>
+                        <option value="G">G</option>
+                        <option value="GG">GG</option>
+                    </select>
+                    <label for="color">Cor:</label>
+                    <select id="color" onchange="updateProductImage()">
+                        <option value="marrom">Marrom</option>
+                        <option value="preta">Preta</option>
+                        <option value="branca">Branca</option>
+                    </select>
+                </div>
+                <button onclick="addToCart()">Adicionar ao Carrinho</button>
+            </div>
+        </section>
+<!--
+        <div class="carousel">
+            <div class="carousel-item">Camisa 1</div><img src="C:\Users\lkweb\Desktop\Projeto-compartilhado\OnlineClothingStore-main\imagens\highMarrom.jpg" alt="camisa marrom">
+            <div class="carousel-item">Camisa 2</div><img src="C:\Users\lkweb\Desktop\Projeto-compartilhado\OnlineClothingStore-main\imagens\highPreta.jpg" alt="camisa preta">
+            <div class="carousel-item">Camisa 3</div><img src="C:\Users\lkweb\Desktop\Projeto-compartilhado\OnlineClothingStore-main\imagens\then.jpg" alt="camisa branca">
+-->
+        </div>
+            <section id="products">
             </section>
+        
+
+        <div id="products-modal" class="modal">
+            <div class="modal-content"><span class="close">&times;</span>
+                <p>Detalhes do produto</p>
+        </div>
+        </div>
     </main>
 
+    <div id="chatbot">
+        <button id="chatbot-toggle">Chat</button>
+        <div id="chatbot-window" class="hidden">
+            <div id="chat-content"></div>
+            <input type="text" id="chat-input" placeholder="Digite sua mensagem...">
+        </div>
+    </div>
+    
     <footer>
         <p>&copy; 2023 Minha Loja de Roupas</p>
     </footer>
-
-    <script src="script.js"></script>
 </body>
+
 </html>
