@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,27 +10,26 @@
     <script src="script.js"></script>
 </head>
 <body>
-    <header>
-        <nav> 
-            <p>G23 Malhas</p>
+    <header> 
+        <div class="top-bar">
+            <img id="logo" src="imagens/Logotipo.png" alt="Logotipo">
+            <nav>
             
-            <ul>
-                <li><a href="#"><i class="fas fa-home"></i> Inicio</a></li>
-                <li><a href="#">Produtos</a></li>
-                <li><a href="#">Carrinho <span id="cart-count">0</span></a></li>
-                <li><a href="#">Contato</a></li>
-                <li><a href="#">Perfil</a></li>
-                <input type="text" placeholder="Buscar produtos..." id="search-bar">
-            </ul>
-        </nav>
-       
-    </header>
-
-    
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="#">Produtos</a></li>
+                    <li><a href="cart.html">Carrinho</span></a></li>
+                    <li><a href="#">Contato</a></li>
+                    <li><a href="#">Perfil</a></li>
+                    <input type="text" placeholder="Buscar produtos..." id="search-bar">
+                </ul>
+            </nav>
+        </div>
+   </header>
     <main>
         <section id="products">
             <div class="product">
-                <img src="C:\Users\lkweb\Desktop\Projeto-compartilhado\OnlineClothingStore-main\imagens\highMarrom.jpg" alt="Camiseta">
+                <img id="product-image" src="imagens/highPreta.jpg" alt="Camiseta">
                 <h2>Camiseta Estilosa</h2>
                 <p>R$ 49,90</p>
                 <div class="options">
@@ -50,35 +50,30 @@
                 <button onclick="addToCart()">Adicionar ao Carrinho</button>
             </div>
         </section>
-<!--
-        <div class="carousel">
-            <div class="carousel-item">Camisa 1</div><img src="C:\Users\lkweb\Desktop\Projeto-compartilhado\OnlineClothingStore-main\imagens\highMarrom.jpg" alt="camisa marrom">
-            <div class="carousel-item">Camisa 2</div><img src="C:\Users\lkweb\Desktop\Projeto-compartilhado\OnlineClothingStore-main\imagens\highPreta.jpg" alt="camisa preta">
-            <div class="carousel-item">Camisa 3</div><img src="C:\Users\lkweb\Desktop\Projeto-compartilhado\OnlineClothingStore-main\imagens\then.jpg" alt="camisa branca">
--->
-        </div>
-            <section id="products">
-            </section>
-        
-
         <div id="products-modal" class="modal">
             <div class="modal-content"><span class="close">&times;</span>
                 <p>Detalhes do produto</p>
-        </div>
+            </div>
         </div>
     </main>
-
     <div id="chatbot">
-        <button id="chatbot-toggle">Chat</button>
+        <a href="https://wa.me/seu-numero-de-telefone" target="_blank">
+            <i class="fab fa-whatsapp" style="font-size: 2em; color: #25D366;"></i>
+        </a>
         <div id="chatbot-window" class="hidden">
             <div id="chat-content"></div>
             <input type="text" id="chat-input" placeholder="Digite sua mensagem...">
         </div>
     </div>
     
+    
     <footer>
-        <p>&copy; 2023 Minha Loja de Roupas</p>
-    </footer>
+        <p>&copy; 2023 G23 Malhas. Todos os direitos reservados.</p>
+        <ul>  
+          <li><a href="/src/Politica de privacidade.html">Política de Privacidade</a></li>
+        </ul>
+      </footer>
 </body>
-
 </html>
+
+
