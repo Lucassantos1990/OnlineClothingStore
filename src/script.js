@@ -2,11 +2,11 @@ function updateProductImage() {
   const color = document.getElementById("color").value;
   const image = document.getElementById("product-image");
   if (color === "marrom") {
-      image.src = "imagens/highMarrom.jpg";
+      image.src = "/imagens/highMarrom.jpg";
   } else if (color === "preta") {
-      image.src = "imagens/highPreta.jpg";
+      image.src = "/imagens/highPreta.jpg";
   } else if (color === "branca") {
-      image.src = "imagens/then.jpg";
+      image.src = "/imagens/then.jpg";
   }
 }
 

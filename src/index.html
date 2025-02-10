@@ -7,69 +7,35 @@
     <link rel="stylesheet" href="/src/style.css">
     <title>G23 Malhas</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    <script src="/src/script.js"></script>
+    
 </head>
 <body>
     <header> 
         <div class="top-bar">
-            <img id="logo" src="imagens/Logotipo.png" alt="Logotipo">
+            <img id="logo" src="/imagens/g23.jpg" alt="Logotipo">
             <nav>
-            
                 <ul>
                     <li><a href="/src/index.html">Inicio</a></li>
-                    <li><a href="#">Produtos</a></li>
-                    <li><a href="/src/carrinho/cart.html">Carrinho</span></a></li>
-                    <li><a href="#">Contato</a></li>
+                    <li><a href="/src/carrinho/cart.html">Carrinho</a></li>
                     <li><a href="#">Perfil</a></li>
                 </ul>
-                <div class="search-container">
-                <input type="text" placeholder="Buscar produtos..." id="search-bar">
-                <button class="search-button" title="Buscar">
-                    <i class="fas fa-search search-icon"></i>
-                </button>
-                </div>
             </nav>
         </div>
+        
+        <div id="contatos">
+            <h1>Contatos</h1>
+            <p>
+              Telefone: <a href="https://wa.me/5511999999999" target="_blank" rel="noopener" class="link-pulsar">(11) 99999-9999</a>
+            </p>
+            <p>
+              Instagram: <a href="https://www.instagram.com/g23malhas" target="_blank" rel="noopener" class="link-pulsar">@g23malhas</a>
+            </p>
+          </div>
+          
+          
+  
    </header>
-    <main>
-        <section id="products">
-            <div class="product">
-                <img id="product-image" src="imagens/highPreta.jpg" alt="Camiseta">
-                <h2>Camiseta Estilosa</h2>
-                <p>R$ 49,90</p>
-                <div class="options">
-                    <label for="size">Tamanho:</label>
-                    <select id="size">
-                        <option value="P">P</option>
-                        <option value="M">M</option>
-                        <option value="G">G</option>
-                        <option value="GG">GG</option>
-                    </select>
-                    <label for="color">Cor:</label>
-                    <select id="color" onchange="updateProductImage()">
-                        <option value="marrom">Marrom</option>
-                        <option value="preta">Preta</option>
-                        <option value="branca">Branca</option>
-                    </select>
-                </div>
-                <button onclick="addToCart('Camiseta Estilosa', 49.90, document.getElementById('color').value)">Adicionar ao Carrinho</button>
-            </div>
-        </section>
-        <div id="products-modal" class="modal">
-            <div class="modal-content"><span class="close">&times;</span>
-                <p>Detalhes do produto</p>
-            </div>
-        </div>
-    </main>
-    <div id="chatbot">
-        <a href="https://wa.me/seu-numero-de-telefone" target="_blank" rel="noopener" title="Contact us on WhatsApp">
-            <i class="fab fa-whatsapp whatsapp-icon"></i>
-        </a>
-        <div id="chatbot-window" class="hidden">
-            <div id="chat-content"></div>
-            <input type="text" id="chat-input" placeholder="Digite sua mensagem...">
-        </div>
-    </div>
+
     
     
     <footer>
@@ -78,6 +44,8 @@
         <li><a href="/src/Politica de privacidade.html">Política de Privacidade</a></li>
         </ul>
       </footer>
+
+    <script src="/src/script.js"></script>
 </body>
 </html>
 

@@ -3,9 +3,10 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #333;
+    background-color: #ffffff;
    
 }
+
 /* Cabeçalho */
 header {
     background-color: black;
@@ -24,24 +25,10 @@ header {
     width: auto;
 }    
 
-nav ul li a {
-    color: #ffe601;
-    text-decoration: none;
-}
-
-
 body img {
     text-align:left;
-   
-
-
 }
-p {
-    background-color: black;
-    color: #ddd;
-    font-family: sans-serif;
 
-}
 nav ul {
     list-style: none;
     margin: 0;
@@ -56,31 +43,63 @@ nav li {
     margin: 0 10px;
 }
 
-/* Produtos */
-#products {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    padding: 20px;
-    margin: 50px 0;
-    
-}
+/* efeito no texto do menu */
+@keyframes pulsar {
+    0% {
+      transform: scale(1);
+      opacity: 1;
+    }
+    50% {
+      transform: scale(1.1);
+      opacity: 0.5;
+    }
+    100% {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+  
+  nav ul li a {
+    color: inherit;
+    text-decoration: none;
+    display: inline-block;
+  }
+  
+  nav ul li a:hover {
+    color: #fff;
+    background-color: #333;
+    transition: background-color 0.3s, transform 1s, opacity 1s;
+    animation: pulsar 1s infinite;
+  }
+  
 
-.product {
-    border: 1px solid #333;
-    padding: 20px;
-    margin: 10px;
-    width: 600px;
-    text-align: center;
-    background-color: #696666;
-    
-}
-
-.product img {
-    max-width: 100%;
-    max-height: auto;
-    background-color: #5f5f5f;
-}
+/*Contato*/
+.link-pulsar {
+    color: white;
+    text-decoration: none;
+    position: relative;
+    display: inline-block;
+  }
+  
+  .link-pulsar:hover {
+    animation: pulsar 1s infinite;
+  }
+  
+  @keyframes pulsar {
+    0% {
+      transform: scale(1);
+      opacity: 1;
+    }
+    50% {
+      transform: scale(1.1);
+      opacity: 0.5;
+    }
+    100% {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+  
 
 /* Rodapé */
 footer {
@@ -89,192 +108,11 @@ footer {
     padding: 20px;
 }
 
-/* Barra de pesquise*/
-#search-bar {
-    margin: 20px;
-    padding: 10px;
-    width: 200px;
-}
+p {
+    background-color: black;
+    color: #ddd;
+    font-family: sans-serif;
 
-
-img {
-    margin: 20px;
-    padding: 30px;
-    width: 100px;
-
-}
-
-/* efeito no texto do menu */
-nav ul li a:hover {
-    color: #fff;
-    background-color: #333;
-    transition: background-color 0.3s;
-}
-
-/*estilo modal*/
-.modal {
-    display: none;
-    position: fixed;
-    z-index: 1;
-    padding-top: 100px;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    overflow: auto;
-    background-color: rgba(0, 0, 0, 0.4);
-}
-.modal-content {
-    background-color: #fefefe;
-    margin: auto;
-    padding: 20px;
-    border: 1px solid #888;
-    width: 80%;
-}
-
-/* adicionar animação quando um item for adicionado no carrinho*/
-.cart-update {
-    animation: bounce 0.5s;
-}
-
-@keyframes bounce {
-    0%, 100% {
-        transform: translateY(0);
-    }
-    50% {
-        transform: translateY(-10px);
-    }
-}
-
-/*responsividade para dispositivos movel*/
-@media (max-width: 1080px) {
-    .top-bar {
-        flex-direction: column;
-    }
-    nav ul {
-        flex-direction: column;
-        display: none;
-    }
-    nav ul.show {
-        display: flex; /* Mostra o menu quando a classe 'show' é adicionada */
-    }
-
-    #menu-toggle {
-        display: block; /* Mostra o botão de alternância do menu */
-    }
-    .product {
-        width: 100%;
-        margin: 5px;
-    }
-    .options {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    #search-bar {
-        width: 100%;
-    }
-}
-
-/* Chatbot para atentimento ao cliente*/
-#chatbot {
-    position: fixed;
-    bottom: 50px;
-    right: 50px;
-    
-}
-
-#chatbot-window {
-    display: none;
-    background: rgb(14, 14, 14);
-    border: 1px solid #000000;
-    padding: 10px;
-    width: 300px;
-    height: 400px;
-    overflow-y: auto;
-}
-
-/* Ajuste o tamanho e cores conforme necessário */
-.whatsapp-icon {
-    font-size: 50px; 
-    color: #25D366; 
-}
-
-.hidden {
-    display: none;
-}
-
-html {
-    scroll-behavior: smooth;
-}
-
-/* container onde esta informações da camisa */
-.product {
-    border: 1px solid #ddd;
-    padding: 20px;
-    margin: 10px;
-    width: 350px;
-    text-align: center;
-    background-color: #696666;
-    box-sizing: border;
-}
-
-.options {
-    display: flex;
-    align-items: center;
-    gap: 10px; 
-    margin: 10px 0;
-}
-
-.options label {
-    margin-right: 5px; /* Espaçamento entre o label e o select */
-}
-
-label, select {
-    margin-right: 5px;
-}
-
-/* Estilo do botão */
-button {
-    background-color: #696666; /* Cor de fundo */
-    color: white; /* Cor do texto */
-    padding: 10px 20px; /* Espaçamento interno */
-    border: none; /* Remover borda */
-    border-radius: 5px; /* Bordas arredondadas */
-    cursor: pointer; /* Cursor de ponteiro */
-    font-size: 16px; /* Tamanho da fonte */
-    transition: background-color 0.3s, transform 0.3s; /* Transições */
-}
-
-button:hover {
-    background-color: #000000; /* Cor de fundo ao passar o mouse */
-    transform: scale(1.05); /* Aumentar ligeiramente o tamanho */
-}
-
-button:active {
-    background-color: #000000; /* Cor de fundo ao clicar */
-    transform: scale(0.95); /* Reduzir ligeiramente o tamanho */
-}
-
-button, select {
-    background-color: #696666; /* Cor de fundo */
-    color: white; /* Cor do texto */
-    padding: 10px 10px; /* Espaçamento interno */
-    border: none; /* Remover borda */
-    border-radius: 5px; /* Bordas arredondadas */
-    cursor: pointer; /* Cursor de ponteiro */
-    font-size: 16px; /* Tamanho da fonte */
-    transition: background-color 0.3s, transform 0.3s; /* Transições */
-}
-
-button:hover, select:hover {
-    background-color: #000000; /* Cor de fundo ao passar o mouse */
-    transform: scale(1.05); /* Aumentar ligeiramente o tamanho */
-}
-
-button:active, select:active {
-    background-color: #000000; /* Cor de fundo ao clicar */
-    transform: scale(0.95); /* Reduzir ligeiramente o tamanho */
 }
 
 footer ul li a {
@@ -290,32 +128,8 @@ footer li {
     margin: 5px 0;
 }
 
-.search-container {
-    position: relative;
-    display: inline-block;
-    float: none;
-}
-
-#search-bar {
-    padding-right: 40px; /* Espaço para a lupa */
-}
-
-.search-icon {
-    font-size: 0px;
-    color: #ccc;
-}
-
-.search-button {
-    position: absolute;
-    right: 5px;
-    top: 50%;
-    transform: translateY(-50%);
-    background: none;
-    border: none;
-    cursor: pointer;
-}
-
-.search-icon {
-    font-size: 20px; /* Ajuste o tamanho conforme necessário */
-    color: #ccc;
+footer ul li a:hover {
+    color: #fff;
+    background-color: #333;
+    transition: background-color 0.3s;
 }
